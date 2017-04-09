@@ -1,0 +1,3 @@
+vb_company_salary:
+    resource: "@VbCompanySalaryBundle/Resources/config/routing.xml"
+    prefix:   /

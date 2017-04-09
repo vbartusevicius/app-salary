@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+    <entity repository-class="Vb\Bundle\CompanySalaryBundle\Repository\EmployeeInfoRepository"
+            name="Vb\Bundle\CompanySalaryBundle\Entity\EmployeeInfo"
+            table="company_salary_employee_info">
+        <id name="id" type="integer" column="id">
+            <generator strategy="AUTO"/>
+        </id>
+        <field name="datePeriod" type="date" column="date_period"/>
+        <field name="count" type="integer" column="count"/>
+
+        <many-to-one target-entity="Vb\Bundle\CompanySalaryBundle\Entity\Company" field="company" inversed-by="employeeInfo"/>
+    </entity>
+</doctrine-mapping>
