@@ -13,7 +13,7 @@ class EmployeeInfo
     private $id;
 
     /**
-     * @var \DateTime
+     * @var string
      */
     private $datePeriod;
 
@@ -41,9 +41,9 @@ class EmployeeInfo
     /**
      * Set datePeriod
      *
-     * @param \DateTime $datePeriod
+     * @param string $datePeriod
      *
-     * @return EmployeeInfo
+     * @return $this
      */
     public function setDatePeriod($datePeriod)
     {
@@ -55,7 +55,7 @@ class EmployeeInfo
     /**
      * Get datePeriod
      *
-     * @return \DateTime
+     * @return string
      */
     public function getDatePeriod()
     {
@@ -67,7 +67,7 @@ class EmployeeInfo
      *
      * @param integer $count
      *
-     * @return EmployeeInfo
+     * @return $this
      */
     public function setCount($count)
     {
@@ -97,7 +97,7 @@ class EmployeeInfo
     /**
      * @param Company $company
      *
-     * @return EmployeeInfo
+     * @return $this
      */
     public function setCompany($company)
     {

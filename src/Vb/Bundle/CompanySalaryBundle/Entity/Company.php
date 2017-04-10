@@ -55,7 +55,7 @@ class Company
      *
      * @param string $name
      *
-     * @return Company
+     * @return $this
      */
     public function setName($name)
     {
@@ -79,7 +79,7 @@ class Company
      *
      * @param string $code
      *
-     * @return Company
+     * @return $this
      */
     public function setCode($code)
     {
@@ -109,7 +109,7 @@ class Company
     /**
      * @param ArrayCollection|Salary[] $salaries
      *
-     * @return Company
+     * @return $this
      */
     public function setSalaries($salaries)
     {
@@ -146,7 +146,7 @@ class Company
     /**
      * @param ArrayCollection|EmployeeInfo[] $employeeInfo
      *
-     * @return Company
+     * @return $this
      */
     public function setEmployeeInfo($employeeInfo)
     {

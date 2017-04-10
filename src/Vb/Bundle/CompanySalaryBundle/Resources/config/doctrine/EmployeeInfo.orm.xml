@@ -5,10 +5,13 @@
     <entity repository-class="Vb\Bundle\CompanySalaryBundle\Repository\EmployeeInfoRepository"
             name="Vb\Bundle\CompanySalaryBundle\Entity\EmployeeInfo"
             table="company_salary_employee_info">
+        <indexes>
+            <index columns="date_period"/>
+        </indexes>
         <id name="id" type="integer" column="id">
             <generator strategy="AUTO"/>
         </id>
-        <field name="datePeriod" type="date" column="date_period"/>
+        <field name="datePeriod" type="string" column="date_period"/>
         <field name="count" type="integer" column="count"/>
 
         <many-to-one target-entity="Vb\Bundle\CompanySalaryBundle\Entity\Company" field="company" inversed-by="employeeInfo"/>

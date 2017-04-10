@@ -17,6 +17,7 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
             new Vb\Bundle\CompanySalaryBundle\VbCompanySalaryBundle(),
+            new Vb\Bundle\SalaryProviderBundle\VbSalaryProviderBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

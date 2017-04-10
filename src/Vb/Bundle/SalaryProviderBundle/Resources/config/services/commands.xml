@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="vb_salary_provider.command.update_sodra_salaries"
+                 class="Vb\Bundle\SalaryProviderBundle\Command\UpdateSodraSalariesCommand">
+            <tag name="console.command"/>
+            <argument type="service" id="vb_salary_provider.sodra.salary_updater"/>
+        </service>
+    </services>
+</container>

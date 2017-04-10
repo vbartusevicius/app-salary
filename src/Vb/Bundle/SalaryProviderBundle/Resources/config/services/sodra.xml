@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="vb_salary_provider.sodra.base_uri">http://sodra.is.lt/Failai/</parameter>
+    </parameters>
+
+    <services>
+        <service id="vb_salary_provider.sodra.salary_processor"
+                 class="Vb\Bundle\SalaryProviderBundle\Service\SalaryProvider\Sodra\SalaryProcessor">
+        </service>
+
+        <service id="vb_salary_provider.sodra.salary_updater"
+                 class="Vb\Bundle\SalaryProviderBundle\Service\SalaryProvider\Sodra\SodraSalaryUpdater">
+            <argument type="service" id="vb_salary_provider.sodra.sodra_client"/>
+            <argument type="service" id="vb_salary_provider.sodra.salary_processor"/>
+        </service>
+
+        <service id="vb_salary_provider.sodra.sodra_client"
+                 class="Vb\Bundle\SalaryProviderBundle\Service\SalaryProvider\Sodra\SodraClient">
+            <argument type="service" id="vb_salary_provider.sodra.client"/>
+            <argument type="service" id="logger"/>
+            <argument type="service" id="filesystem"/>
+            <argument>%kernel.cache_dir%/sodra</argument>
+        </service>
+
+        <service id="vb_salary_provider.sodra.client"
+                 class="GuzzleHttp\Client">
+            <argument type="collection">
+                <argument key="base_uri">%vb_salary_provider.sodra.base_uri%</argument>
+            </argument>
+        </service>
+    </services>
+</container>

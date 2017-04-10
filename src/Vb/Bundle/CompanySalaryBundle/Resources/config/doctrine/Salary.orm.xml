@@ -5,10 +5,13 @@
     <entity repository-class="Vb\Bundle\CompanySalaryBundle\Repository\SalaryRepository"
             name="Vb\Bundle\CompanySalaryBundle\Entity\Salary"
             table="company_salary_salaries">
+        <indexes>
+            <index columns="date_period"/>
+        </indexes>
         <id name="id" type="integer" column="id">
             <generator strategy="AUTO"/>
         </id>
-        <field name="datePeriod" type="date" column="date_period"/>
+        <field name="datePeriod" type="string" column="date_period"/>
         <field name="employedAverage" type="decimal" column="employed_average" precision="10" scale="2"/>
         <field name="copyrightAverage" type="decimal" column="copyright_average" precision="10" scale="2"/>
         <field name="totalSsi" type="decimal" column="total_ssi" precision="10" scale="2"/>

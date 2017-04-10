@@ -13,7 +13,7 @@ class Salary
     private $id;
 
     /**
-     * @var \DateTime
+     * @var string
      */
     private $datePeriod;
 
@@ -51,9 +51,9 @@ class Salary
     /**
      * Set datePeriod
      *
-     * @param \DateTime $datePeriod
+     * @param string $datePeriod
      *
-     * @return Salary
+     * @return $this
      */
     public function setDatePeriod($datePeriod)
     {
@@ -65,7 +65,7 @@ class Salary
     /**
      * Get datePeriod
      *
-     * @return \DateTime
+     * @return string
      */
     public function getDatePeriod()
     {
@@ -77,7 +77,7 @@ class Salary
      *
      * @param string $employedAverage
      *
-     * @return Salary
+     * @return $this
      */
     public function setEmployedAverage($employedAverage)
     {
@@ -101,7 +101,7 @@ class Salary
      *
      * @param string $copyrightAverage
      *
-     * @return Salary
+     * @return $this
      */
     public function setCopyrightAverage($copyrightAverage)
     {
@@ -125,7 +125,7 @@ class Salary
      *
      * @param string $totalSsi
      *
-     * @return Salary
+     * @return $this
      */
     public function setTotalSsi($totalSsi)
     {
@@ -155,7 +155,7 @@ class Salary
     /**
      * @param Company $company
      *
-     * @return Salary
+     * @return $this
      */
     public function setCompany($company)
     {
