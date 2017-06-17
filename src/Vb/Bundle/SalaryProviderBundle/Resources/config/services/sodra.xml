@@ -11,12 +11,15 @@
     <services>
         <service id="vb_salary_provider.sodra.salary_processor"
                  class="Vb\Bundle\SalaryProviderBundle\Service\SalaryProvider\Sodra\SalaryProcessor">
+            <argument type="service" id="vb_salary_provider.normalizer.sodra.salary_entry"/>
         </service>
 
         <service id="vb_salary_provider.sodra.salary_updater"
                  class="Vb\Bundle\SalaryProviderBundle\Service\SalaryProvider\Sodra\SodraSalaryUpdater">
             <argument type="service" id="vb_salary_provider.sodra.sodra_client"/>
             <argument type="service" id="vb_salary_provider.sodra.salary_processor"/>
+            <argument type="service" id="vb_salary_provider.transformer.sodra.company"/>
+            <argument type="service" id="vb_salary_provider.transformer.sodra.salary"/>
         </service>
 
         <service id="vb_salary_provider.sodra.sodra_client"

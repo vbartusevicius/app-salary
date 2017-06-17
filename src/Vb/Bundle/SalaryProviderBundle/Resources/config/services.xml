@@ -7,5 +7,7 @@
     <imports>
         <import resource="services/sodra.xml"/>
         <import resource="services/commands.xml"/>
+        <import resource="services/normalizers.xml"/>
+        <import resource="services/transformers.xml"/>
     </imports>
 </container>

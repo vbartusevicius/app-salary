@@ -5,10 +5,24 @@
     <entity repository-class="Vb\Bundle\CompanySalaryBundle\Repository\CompanyRepository"
             name="Vb\Bundle\CompanySalaryBundle\Entity\Company"
             table="company_salary_companies">
+        <unique-constraints>
+            <unique-constraint columns="code"/>
+        </unique-constraints>
         <id name="id" type="integer" column="id">
             <generator strategy="AUTO"/>
         </id>
         <field name="name" type="string" column="name" length="255"/>
-        <field name="code" type="string" column="code" length="255" unique="true"/>
+        <field name="code" type="string" column="code" length="255"/>
+
+        <one-to-many target-entity="Vb\Bundle\CompanySalaryBundle\Entity\Salary" mapped-by="company" field="salaries">
+            <cascade>
+                <cascade-all/>
+            </cascade>
+        </one-to-many>
+        <one-to-many target-entity="Vb\Bundle\CompanySalaryBundle\Entity\EmployeeInfo" mapped-by="company" field="employeeInfo">
+            <cascade>
+                <cascade-all/>
+            </cascade>
+        </one-to-many>
     </entity>
 </doctrine-mapping>

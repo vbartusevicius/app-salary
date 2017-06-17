@@ -26,7 +26,8 @@
         "guzzlehttp/guzzle": "^6.2",
         "maba/webpack-bundle": "^0.6.1",
         "doctrine/doctrine-migrations-bundle": "^1.2",
-        "fabpot/goutte": "^3.2"
+        "fabpot/goutte": "^3.2",
+        "paysera/lib-serializer": "^1.3"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",

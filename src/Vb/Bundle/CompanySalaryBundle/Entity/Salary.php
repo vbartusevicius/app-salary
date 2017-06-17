@@ -13,7 +13,7 @@ class Salary
     private $id;
 
     /**
-     * @var string
+     * @var \DateTime
      */
     private $datePeriod;
 
@@ -51,7 +51,7 @@ class Salary
     /**
      * Set datePeriod
      *
-     * @param string $datePeriod
+     * @param \DateTime $datePeriod
      *
      * @return $this
      */
@@ -65,7 +65,7 @@ class Salary
     /**
      * Get datePeriod
      *
-     * @return string
+     * @return \DateTime
      */
     public function getDatePeriod()
     {

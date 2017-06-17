@@ -11,7 +11,7 @@
         <id name="id" type="integer" column="id">
             <generator strategy="AUTO"/>
         </id>
-        <field name="datePeriod" type="string" column="date_period"/>
+        <field name="datePeriod" type="datetime" column="date_period"/>
         <field name="employedAverage" type="decimal" column="employed_average" precision="10" scale="2"/>
         <field name="copyrightAverage" type="decimal" column="copyright_average" precision="10" scale="2"/>
         <field name="totalSsi" type="decimal" column="total_ssi" precision="10" scale="2"/>

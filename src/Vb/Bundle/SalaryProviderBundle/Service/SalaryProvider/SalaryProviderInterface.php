@@ -4,5 +4,5 @@ namespace Vb\Bundle\SalaryProviderBundle\Service\SalaryProvider;
 
 interface SalaryProviderInterface
 {
-    public function updateSalaryInfo();
+    public function updateSalaryInfo(\DateTime $period);
 }

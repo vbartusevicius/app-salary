@@ -1,10 +1,11 @@
 <?php
 
-namespace Vb\Bundle\SalaryProviderBundle\Service\SalaryProvider\Sodra\Normalizer;
+namespace Vb\Bundle\CompanySalaryBundle\Normalizer;
 
+use Paysera\Component\Serializer\Normalizer\DenormalizerInterface;
 use Vb\Bundle\CompanySalaryBundle\Entity\Salary;
 
-class SalaryNormalizer
+class SalaryNormalizer implements DenormalizerInterface
 {
     /**
      * @param array $data
